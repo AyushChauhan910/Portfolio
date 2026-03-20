@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -30,39 +29,20 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // No email service integration: open the user's mail client via `mailto`.
+    // This reliably works on all hosts (including Vercel) without extra env vars.
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: personal.name,
-          from_email: form.email,
-          to_email: "talktoayushchauhan@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+    const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}\n`
+    );
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+    // Use the direct target email so all messages reach you.
+    window.location.href = `mailto:talktoayushchauhan@gmail.com?subject=${subject}&body=${body}`;
 
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+    setLoading(false);
+    setForm({ name: "", email: "", message: "" });
   };
 
   return (
