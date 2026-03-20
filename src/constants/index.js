@@ -221,7 +221,7 @@ const projects = [
     ],
     image: deepfake,
     source_code_link: "https://github.com/AyushChauhan910/Deepfake-Detector",
-    live_demo_link: "https://deepfakedetector.app",
+    live_demo_link: "https://deepfakedetector-rouge.vercel.app/",
     timeline: "Jul 2025",
   },
   {
@@ -248,7 +248,7 @@ const projects = [
     ],
     image: music,
     source_code_link: "https://github.com/AyushChauhan910/Music-Recommendation-System",
-    live_demo_link: "https://music-recommendation-system.app",
+    live_demo_link: "https://music-recommendation-system-theta.vercel.app/",
     timeline: "Jun 2025",
   },
 ];
