@@ -12,6 +12,10 @@ import {
   gearXpert,
   project2,
   project3,
+  deepfake,
+  music,
+  absolute,
+  PLGA,
   mysql,
   express,
   aws,
@@ -32,8 +36,7 @@ import {
 } from '../assets'
 
 
-// Import Tekisky separately
-import tekisky from "../assets/company/tekisky.png";
+// (Optional) keep legacy imports here if needed
 
 
 export const navLinks = [
@@ -156,7 +159,7 @@ const experiences = [
   {
     title: "Digital Transformation Intern",
     company_name: "Absolute Smart Solutions, Gurgaon, Haryana",
-    icon: tekisky,
+    icon: absolute,
     iconBg: "#383E56",
     date: "May 2025 – Jul 2025",
     points: [
@@ -192,7 +195,7 @@ const projects = [
         color: "green-text-gradient",
       }, 
     ],
-    image: project2,
+    image: PLGA,
     source_code_link: "",
     live_demo_link: "",
     timeline: "Mar 2026 – Ongoing",
@@ -216,7 +219,7 @@ const projects = [
       },
       { name: "react", color: "white-text-gradient" },
     ],
-    image: gearXpert,
+    image: deepfake,
     source_code_link: "https://github.com/AyushChauhan910/Deepfake-Detector",
     live_demo_link: "https://deepfakedetector.app",
     timeline: "Jul 2025",
@@ -243,7 +246,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project3,
+    image: music,
     source_code_link: "https://github.com/AyushChauhan910/Music-Recommendation-System",
     live_demo_link: "https://music-recommendation-system.app",
     timeline: "Jun 2025",
