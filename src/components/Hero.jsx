@@ -20,9 +20,8 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className='text-[#915EFF]'>Ayush</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I build production-grade AI systems <br/>
-            and full-stack applications
+          <p className={`${styles.heroSubText} mt-2 text-white-100 max-w-2xl`}>
+            Full-stack AI engineer building intelligent systems at the intersection of machine learning, agentic AI, and production-grade software.
           </p>
         </div>
       </div>

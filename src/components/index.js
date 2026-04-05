@@ -6,8 +6,9 @@ import Education from "./Education";
 import Tech from "./Tech";
 import Experience from "./Experience";
 import Works from "./Works";
-import Certifications from "./Certifications";
-import Leadership from "./Leadership";
+import OpenSource from "./OpenSource";
+import Publications from "./Publications";
+import CompetitiveAchievements from "./CompetitiveAchievements";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 
@@ -20,8 +21,9 @@ export {
   Tech,
   Experience,
   Works,
-  Certifications,
-  Leadership,
+  OpenSource,
+  Publications,
+  CompetitiveAchievements,
   Contact,
   CanvasLoader,
   EarthCanvas, 

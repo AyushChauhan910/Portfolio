@@ -17,6 +17,7 @@ import deepfake from "./deepfake.png";
 import music from "./music.png";
 import absolute from "./absolute.png";
 import PLGA from "./PLGA.png";
+import finsight from "./finsight.png";
 import mysql from './tech/mysql.png';
 import express from './tech/express.png';
 import aws from './tech/aws.png';
@@ -48,6 +49,7 @@ export {
   music,
   absolute,
   PLGA,
+  finsight,
   mysql,
   express,
   aws,

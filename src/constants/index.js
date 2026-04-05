@@ -2,20 +2,18 @@
 import {
   logo,
   backend,
-  creator,
   mobile,
   web,
   github,
   menu,
   close,
   css,
-  gearXpert,
   project2,
   project3,
   deepfake,
-  music,
   absolute,
   PLGA,
+  finsight,
   mysql,
   express,
   aws,
@@ -64,12 +62,16 @@ export const navLinks = [
     title: "Projects",
   },
   {
-    id: "certifications",
-    title: "Certifications",
+    id: "opensource",
+    title: "Open Source",
   },
   {
-    id: "leadership",
-    title: "Leadership",
+    id: "publications",
+    title: "Publications",
+  },
+  {
+    id: "achievements",
+    title: "Achievements",
   },
   {
     id: "contact",
@@ -90,10 +92,6 @@ const services = [
     title: "Production ML Systems",
     icon: backend,
   },
-  {
-    title: "UI Engineering",
-    icon: creator,
-  },
 ];
 
 const skillGroups = [
@@ -108,6 +106,10 @@ const skillGroups = [
       "Pandas",
       "NumPy",
       "LangChain",
+      "LangGraph",
+      "ChromaDB",
+      "BGE embeddings",
+      "Agentic AI",
       "RAG pipelines",
       "Vector DBs (FAISS)",
       "LLM APIs (OpenAI, Hugging Face)",
@@ -119,7 +121,6 @@ const skillGroups = [
   { title: "Backend", items: ["Node.js", "Express.js", "Flask", "FastAPI", "REST APIs"] },
   { title: "Databases", items: ["MongoDB", "PostgreSQL"] },
   { title: "Cloud & DevOps", items: ["Docker", "Vercel", "Render", "Git/GitHub Actions"] },
-  { title: "Tools", items: ["Figma", "JWT Auth", "Material-UI"] },
 ];
 
 // Keep the original icon grid (used in the design) as "highlights"
@@ -163,10 +164,10 @@ const experiences = [
     iconBg: "#383E56",
     date: "May 2025 – Jul 2025",
     points: [
-      "Spearheaded development of a responsive corporate website (3 pages), implementing an SEO-optimized content strategy that boosted lead generation by 30%.",
-      "Engineered pixel-perfect UI components from Figma mockups with optimized assets, achieving 99% cross-device compatibility.",
-      "Automated sprint coordination workflows reducing task-tracking overhead by 20%.",
-      "Documented CI/CD procedures for seamless migration/deployment, enabling zero-downtime releases.",
+      "Engineered 3-page corporate web platform (Next.js + Tailwind CSS) with structured data markup and Core Web Vitals optimization (LCP < 2.1s), driving 30% lift in qualified lead submissions over 6 weeks post-launch — measured via Google Analytics conversion tracking",
+      "Translated 12 Figma component specs into reusable React component library; reduced image payload by 65% via WebP conversion and lazy loading, achieving 99% cross-browser/device compatibility via BrowserStack testing",
+      "Built Jira automation scripts (Python + REST API) to auto-triage and label incoming tickets by sprint milestone, reducing manual task-tracking overhead by 20% across a 6-person team",
+      "Documented CI/CD procedures for seamless migration/deployment, enabling zero-downtime releases",
     ],
     link: "https://absolutestmart.in",
   },
@@ -196,7 +197,7 @@ const projects = [
       }, 
     ],
     image: PLGA,
-    source_code_link: "",
+    source_code_link: "https://github.com/AyushChauhan910/PLGA",
     live_demo_link: "",
     timeline: "Mar 2026 – Ongoing",
   },
@@ -225,79 +226,57 @@ const projects = [
     timeline: "Jul 2025",
   },
   {
-    name: "Intelligent Music Recommendation Engine",
+    name: "FinSight",
     description:
-      "Developed a hybrid recommender (collaborative + content-based) and improved accuracy by 25% over baselines using TF-IDF + cosine similarity. Integrated Spotify API for 1-click playback and reduced generation time by 60%.",
+      "An autonomous financial research agent that ingests SEC EDGAR filings and answers complex financial questions with 87% accuracy — a 43% improvement over naive RAG. Built with a self-correcting 5-stage LangGraph pipeline and streamed in real-time to a full-stack analyst dashboard with citation sourcing and YoY trend charts.",
     tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "scikit-learn",
-        color: "white-text-gradient",
-      },
-      {
-        name: "spotify-api",
-        color: "green-text-gradient",
-      },
-      {
-        name: "react",
-        color: "pink-text-gradient",
-      },
+      { name: "LangGraph", color: "blue-text-gradient" },
+      { name: "RAG / ChromaDB", color: "white-text-gradient" },
+      { name: "FastAPI", color: "green-text-gradient" },
+      { name: "React.js", color: "pink-text-gradient" },
     ],
-    image: music,
-    source_code_link: "https://github.com/AyushChauhan910/Music-Recommendation-System",
-    live_demo_link: "https://music-recommendation-system-theta.vercel.app/",
-    timeline: "Jun 2025",
+    image: finsight,
+    source_code_link: "https://github.com/AyushChauhan910/FinSight-Full",
+    live_demo_link: "https://fin-sight-full.vercel.app/",
+    timeline: "",
   },
 ];
 
-const certifications = [
+const openSourceContributions = [
   {
-    name: "GenAI Virtual Experience",
-    issuer: "Boston Consulting Group (BCG) – Forage",
-    date: "Jun 2025",
-    details: [
-      "Built a GenAI chatbot to extract and summarize SEC 10-K/10-Q financial metrics using Python, Pandas & NLP. Improved parsing accuracy and automated trend analysis for real-time insights.",
+    role: "Contributor",
+    project: "facebookresearch/sam2 (Meta FAIR)",
+    meta: "18.5k stars on GitHub · March 2026",
+    points: [
+      "Implemented motion-adaptive temporal frame sampler for SAM 2 training pipeline — replaces uniform stride with motion-density-proportional budget allocation using lightweight L1 pixel-diff scoring (PyTorch, PIL)",
+      "Measured 4.1% mean improvement in high-motion frame coverage across 15 DAVIS-2017 sequences",
     ],
-    credential: "",
-  },
-  {
-    name: "Software Engineering",
-    issuer: "HackerRank",
-    date: "Jul 2025",
-    details: ["Validated expertise in REST API design and SQL query optimisation."],
-    credential: "",
+    prLink: "https://github.com/AyushChauhan910/sam2/tree/feat/adaptive-temporal-sampler",
   },
 ];
 
-const leadership = [
+const publications = [
   {
-    title: "Sponsorship Team Member",
-    org: "DOSM, BITS Pilani",
-    date: "Oct 2023 – Oct 2024",
+    title:
+      "Machine Learning-Guided Prediction of Drug Release Kinetics from PLGA Microsphere Formulations: Under Review, Journal of Controlled Release | author | 2026",
+    link: "https://docs.google.com/document/u/1/d/1BL2eFZ6XAXQRhxCvrjmZGytPBWE4pt2QbP7Fro2_rNE/edit?usp=sharing",
+  },
+];
+
+const competitiveAchievements = [
+  {
+    title: "Kaggle — Titanic (Machine Learning from Disaster)",
+    subtitle: "Top 24% (2,951/12,300+ teams) · February 2026",
     points: [
-      "Secured sponsorships for 5+ technical events through data-driven proposals generating a 30% funding increase.",
-      "Analysed market trends and competitor strategies to optimise sponsorship pitch success rate.",
+      "Built stacked ensemble of XGBoost, LightGBM, and CatBoost with custom feature engineering (Title extraction, TicketFreq, interaction terms)",
+      "Achieved 0.787 accuracy",
     ],
   },
   {
-    title: "Logistics Coordinator",
-    org: "DORA, BITS Pilani",
-    date: "Oct 2023 – Oct 2024",
+    title: "OpenEnv Hackathon — Round 2 Qualifier",
+    subtitle: "Hugging Face × Meta · March 2026",
     points: [
-      "Optimised event logistics workflows for 3+ large-scale events serving 1000+ participants.",
-      "Coordinated cross-functional teams ensuring 100% on-time event delivery.",
-    ],
-  },
-  {
-    title: "College Football Player",
-    org: "Football Team, BITS Pilani",
-    date: "Sep 2023 – Present",
-    points: [
-      "Balanced 15+ hours/week athletic training with academics.",
-      "Competed in 5+ inter-collegiate tournaments demonstrating time management and teamwork.",
+      "Built an OpenEnv-compliant SQL Analyst Agent environment; qualified top 30% advancing to Phase 2 Agentic Evaluation judged by Meta and Hugging Face engineers.",
     ],
   },
 ];
@@ -313,7 +292,7 @@ const personal = {
     portfolio: "https://myportfolio.app",
   },
   summary:
-    "Engineered a production-ready deepfake detector and scaled full-stack apps—deploying AI from model to user in the wild. Built and deployed end-to-end AI systems—leveraging LangChain, RAG pipelines, and FAISS vector DBs—to power domain-specific agents.",
+    "I'm Ayush Chauhan, a Computer Science undergraduate at BITS Pilani, Hyderabad, passionate about turning complex AI research into real-world products. From autonomous financial research agents to deepfake detection systems, I build end-to-end solutions that are not just technically rigorous but production-ready. I work across the full stack — designing LangGraph pipelines, training multimodal ML models, and shipping polished React frontends. I'm also an open-source contributor to Meta FAIR's SAM2 and have a research paper under review at the Journal of Controlled Release.",
   languages: ["English (Professional Proficiency)", "Hindi (Native)"],
   interests: ["Competitive Programming", "Sports Analytics", "Physical fitness", "Playing football"],
 };
@@ -326,6 +305,7 @@ export {
   education,
   experiences,
   projects,
-  certifications,
-  leadership,
+  openSourceContributions,
+  publications,
+  competitiveAchievements,
 };
