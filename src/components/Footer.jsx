@@ -1,6 +1,5 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
-import { SiLeetcode } from "react-icons/si";
 import { personal } from "../constants";
 
 const Footer = () => {
@@ -19,13 +18,6 @@ const Footer = () => {
         rel="noopener noreferrer"
       >
         <FaGithub size={24} />
-      </a>
-      <a
-        href={personal.links.leetcode}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SiLeetcode size={24} />
       </a>
     </footer>
   );
