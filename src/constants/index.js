@@ -259,7 +259,7 @@ const publications = [
   {
     title:
       "Machine Learning-Guided Prediction of Drug Release Kinetics from PLGA Microsphere Formulations: Under Review, Journal of Controlled Release | author | 2026",
-    link: "https://docs.google.com/document/u/1/d/1BL2eFZ6XAXQRhxCvrjmZGytPBWE4pt2QbP7Fro2_rNE/edit?usp=sharing",
+    link: "https://drive.google.com/file/d/1BNqTLFPMTyrWqeQPu4oYKwX6Q74Ax5Ke/view?usp=sharing",
   },
 ];
 
@@ -273,10 +273,10 @@ const competitiveAchievements = [
     ],
   },
   {
-    title: "OpenEnv Hackathon — Round 2 Qualifier",
+    title: "OpenEnv Hackathon — Finale",
     subtitle: "Hugging Face × Meta · March 2026",
     points: [
-      "Built an OpenEnv-compliant SQL Analyst Agent environment; qualified top 30% advancing to Phase 2 Agentic Evaluation judged by Meta and Hugging Face engineers.",
+      "Built an OpenEnv-compliant SQL Analyst Agent environment; qualified top 2% of 52,000+ teams, advancing to final Agentic Evaluation judged by Meta and Hugging Face engineers.",
     ],
   },
 ];
