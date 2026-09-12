@@ -5,24 +5,27 @@ const CanvasLoader = () => {
   return (
     <Html
       as='div'
-      center
       style={{
+        position: "fixed",
+        bottom: "1.5rem",
+        right: "1.5rem",
         display: "flex",
-        justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column",
+        gap: "8px",
+        pointerEvents: "none",
       }}
     >
-      <span className='canvas-loader'></span>
+      <span className='canvas-loader' style={{ transform: "scale(0.6)" }}></span>
       <p
         style={{
-          fontSize: 14,
-          color: "#F1F1F1",
-          fontWeight: 800,
-          marginTop: 40,
+          fontSize: 11,
+          color: "#aaa",
+          fontWeight: 600,
+          margin: 0,
+          whiteSpace: "nowrap",
         }}
       >
-        {progress.toFixed(2)}%
+        {progress.toFixed(0)}%
       </p>
     </Html>
   );

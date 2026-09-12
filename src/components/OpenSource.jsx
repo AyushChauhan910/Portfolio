@@ -21,6 +21,10 @@ const OpenSource = () => {
             <p className="mt-1 text-white-100 text-[14px]">{item.project}</p>
             <p className="mt-1 text-secondary text-[13px]">{item.meta}</p>
 
+            {item.note ? (
+              <p className="mt-2 text-secondary text-[13px] italic">{item.note}</p>
+            ) : null}
+
             <ul className="mt-4 list-disc ml-5 space-y-2">
               {item.points.map((p, idx) => (
                 <li
@@ -40,7 +44,7 @@ const OpenSource = () => {
                   rel="noopener noreferrer"
                   className="text-[#915EFF] hover:underline break-all"
                 >
-                  PR in review: {item.prLink}
+                  Branch (fork): {item.prLink}
                 </a>
               </p>
             ) : null}

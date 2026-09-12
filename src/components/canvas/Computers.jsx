@@ -1,8 +1,18 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
+
+// Patch computeBoundingSphere to suppress NaN radius from empty GLTF geometries
+const _origComputeBoundingSphere = THREE.BufferGeometry.prototype.computeBoundingSphere;
+THREE.BufferGeometry.prototype.computeBoundingSphere = function () {
+  _origComputeBoundingSphere.call(this);
+  if (this.boundingSphere && isNaN(this.boundingSphere.radius)) {
+    this.boundingSphere.set(new THREE.Vector3(), 0);
+  }
+};
 
 const Computers = () => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
@@ -21,7 +31,7 @@ const Computers = () => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={0.75} // Keep scale normal for desktop
+        scale={0.75}
         position={[0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />

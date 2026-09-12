@@ -21,7 +21,7 @@ const Hero = () => {
             Hi, I'm <span className='text-[#915EFF]'>Ayush</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100 max-w-2xl`}>
-            Full-stack AI engineer building intelligent systems at the intersection of machine learning, agentic AI, and production-grade software.
+            Building LLM evaluation and agent infrastructure — evaluation frameworks, multi-agent platforms, and production-grade AI systems.
           </p>
         </div>
       </div>

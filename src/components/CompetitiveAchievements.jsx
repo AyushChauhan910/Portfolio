@@ -10,7 +10,7 @@ const CompetitiveAchievements = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>Competitive programming</p>
+        <p className={`${styles.sectionSubText} text-center`}>Recognition</p>
         <h2 className={`${styles.sectionHeadText} text-center`}>Achievements.</h2>
       </motion.div>
 

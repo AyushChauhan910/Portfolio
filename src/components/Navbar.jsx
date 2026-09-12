@@ -48,7 +48,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden sm:flex flex-row gap-10 items-center'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -60,6 +60,16 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[14px] font-semibold px-4 py-2 rounded-lg border border-[#915EFF] text-[#915EFF] hover:bg-[#915EFF] hover:text-white transition-colors duration-200"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
